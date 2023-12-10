@@ -11,3 +11,7 @@ I chose this problem as I really enjoy solving sudoku and wanted to discuss the 
 
 
 Let us walk through the solution. We employ a backtracking solution. The check function checks our current row and column for a duplicate value. We do this to ensure we are allowed to place the number in that spot and there is no duplicate number in our row and column and our current box. The solveSudoku function utilizes recursive backtracking to fill out the grid. We iterate through each cell in the grid and if the cell is empty, it tries placing each digit from '1' to '9' and recursively calls itself for the next cell. If a placement is valid and leads to a solution, it returns true. If no valid placement is found, it backtracks by setting the cell back to '.', indicating that the current placement is not correct. This is done recursively until we fill out the board. The original call is at the start of the grid.
+
+The time complexity of this solution is O(9(n*n)) where n represents the number of empty squares.
+
+The space complexity is O(n^2) represented by the sudoku board.
